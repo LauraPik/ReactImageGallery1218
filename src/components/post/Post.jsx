@@ -1,17 +1,17 @@
 import { Container, Row, Col } from "react-bootstrap";
+import Posts from "../posts/Posts";
 
 const Post = (props) => {
     return (
-      <Container>
-        <Row>
-          <Col ><img src={props.picture} class="w-50 p-3"/>
-          <p>{props.title}</p></Col>
-          <Col ><img src={props.picture} class="w-50 p-3"/>
-          <p>{props.title}</p></Col>
-          <Col ><img src={props.picture} class="w-50 p-3"/>
-          <p>{props.title}</p></Col>
-        </Row>
-      </Container>
+  <div className="card">
+      <img src={props.picture} className="card-img-top" alt="..."/>
+  <div className="card-body">
+    <h5 className="card-title">{props.title}</h5>
+    
+    <a href="#" className="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+     
     );
   }
   
