@@ -25,19 +25,24 @@ const Posts = (props) =>{
  return(
         <div className="container">
             <button onClick={handleClicked}>Add picture</button>
-            <div className="row">
-                {photo.map((photo)=>{
-                    <Post 
-                    key={photo.id}
-                    title= {photo.title}
-                    picture ={photo.picture}
-                    />
-                })}
-            </div>
-
+            
             {clicked ?<div>
                     <Input onSave = {handleFormData} />
                     </div> : <div></div>}
+
+            <div className="row">
+                {photo.map((photo)=>{
+                    console.log(photo)
+                    return(<Post 
+                    key={photo.id}
+                    title= {photo.title}
+                    picture ={photo.picture}
+                    
+                    />)
+                })}
+            </div>
+
+            
                 
         </div>
     )
